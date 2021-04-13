@@ -1,2 +1,2 @@
 # py-mgr-tkinter
-lib tkinter for py-mgr
+lib tkinter for py-mgr 
