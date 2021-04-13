@@ -63,7 +63,7 @@ class ToolTip():
     
 class TkIconProvider(IconProvider):
     def __init__(self,iconsPath=None):
-        super(TkIconProvider, self).__init__iconsPath) 
+        super(TkIconProvider, self).__init__(iconsPath) 
  
     def loadIcons(self,iconsPath):
         for item in listdir(iconsPath):
