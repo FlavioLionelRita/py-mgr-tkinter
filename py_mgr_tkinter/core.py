@@ -61,22 +61,15 @@ class ToolTip():
         if tw:
             tw.destroy()
     
-class IconProvider():
-    def __init__(self,iconsPath=None): 
-        self.icons = {}
-        if iconsPath is not None:
-           self.loadIcons(iconsPath)
-
+class TkIconProvider(IconProvider):
+    def __init__(self,iconsPath=None):
+        super(TkIconProvider, self).__init__iconsPath) 
+ 
     def loadIcons(self,iconsPath):
         for item in listdir(iconsPath):
             name=path.splitext(path.basename(item))[0]
             self.icons[name] = tk.PhotoImage(file=path.join(iconsPath,item))  
-
-    def getIcon(self,key):
-        key = key.replace('.','')
-        if key not in self.icons: key = '_blank'
-        return self.icons[key.replace('.','')]   
-
+            
 class Frame(tk.Frame):
     def __init__(self, master, mgr,mediator,**kw):
         super(Frame, self).__init__(master,**kw)
